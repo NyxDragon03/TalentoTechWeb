@@ -18,7 +18,6 @@
         <label for="">Descripción</label>
         <textarea id="descripcion" id=""></textarea>
         <label for="">Seccion</label>
-
         <button onclick="saludar()">ENVIAR</button>
         <hr>
         <select name="" id="seccion_seleccionada">
@@ -34,9 +33,9 @@
         <button type="button" onclick="cambiarColor('violet')">Lila</button>
         <button type="button" onclick="cambiarColor('purple')">Uva</button>
         <button type="button" onclick="cambiarColor('salmon')">Salmón</button>
-        <button type="button" onclick="cambiarColor('deeppink')">Rosado</button>
-        <button type="button" onclick="cambiarColor('darkslateblue')">Morado</button>
-        <button type="button" onclick="cambiarColor('mediumturquoise')">Turquesa</button>
+        <button type="button" onclick="cambiarColor('crimson')">Rojo</button>
+        <button type="button" onclick="cambiarColor('lavender')">Lavanda</button>
+        <button type="button" onclick="cambiarColor('teal')">Turquesa</button>
     </form>
 </body>
 <script>
@@ -48,10 +47,10 @@
 
     function cambiarColor(color){
         var seccionSeleccionada=document.getElementById("seccion_seleccionada").value
-        var tamaño=document.getElementById("size").value
-        document.getElementById("seccionSeleccionada").style.width=tamaño
-        document.getElementById("seccionSeleccionada").style.height=tamaño
-        document.getElementById("seccionSeleccionada").style.backgroundColor= color
+        var tamano=document.getElementById("size").value
+        document.getElementById("seccionSeleccionada").style.width=tamano
+        document.getElementById("seccionSeleccionada").style.height=tamano
+        document.getElementById("seccionSeleccionada").style.backgroundColor = color
         document.getElementById("seccionSeleccionada").style.color= 'white'
     }
 </script>
