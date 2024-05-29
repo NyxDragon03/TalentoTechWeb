@@ -51,23 +51,23 @@
     <hr>
     <form method="post">
         <label for="">Nombre</label>
-        <input type="text" required placeholder="Ingrese su nombre" name="nombre">
+        <input type="text" name="nombre" id="nombre" required placeholder="Ingrese su nombre" name="nombre">
         <br><br>
         <label for="">Tipo de documento</label>
-        <input type="radio" name="tipo" value="CC" required>
+        <input type="radio" name="tipo" value="CC" id="cedula" required>
         <label for="" class="id">Cedula</label>
-        <input type="radio" name="tipo" value="TI" required>
+        <input type="radio" name="tipo" value="TI" id="tarjeta" required>
         <label for="" class="id">Tarjeta de identidad</label>
-        <input type="radio" name="tipo" value="EX" required>
+        <input type="radio" name="tipo" value="EX" id="extranjeria" required>
         <label for="" class="id">Cedula de extranjería</label>
-        <input type="radio" name="tipo" value="PS" required>
+        <input type="radio" name="tipo" value="PS" id="pasaporte" required>
         <label for="" class="id">Pasaporte</label>
         <br><br>
         <label for="">No. de documento</label>
-        <input type="number" placeholder="Ingrese su # de documento" name="numero" required>
+        <input type="number" id="nDocumento" placeholder="Ingrese su # de documento" name="numero" required>
         <br><br>
         <label for="">Ciudad</label>
-        <select name="ciudad" id="">
+        <select name="ciudad" id="ciudad">
             <option value="">-</option>
             <option value="">Bogotá</option>
             <option value="">Cali</option>
@@ -81,21 +81,21 @@
         </select>
         <br><br>
         <label for="">Dirección</label>
-        <input type="text" placeholder="Ingrese su dirección" name="direccion" required>
+        <input type="text" id="direccion" placeholder="Ingrese su dirección" name="direccion" required>
         <br><br>
         <label for="">Telefono</label>
-        <input type="tel" placeholder="Ingrese su numero de celular" name="tel" required>
+        <input type="tel" id="telefono" placeholder="Ingrese su numero de celular" name="tel" required>
         <br><br>
         <label for="">Correo electrónico</label>
-        <input type="email" placeholder="Ingrese su email" name="email" required>
+        <input type="email" placeholder="Ingrese su email" name="email" id="correo" required>
         <br><br>
         <label for="">Fecha de nacimiento</label>
-        <input type="date" max="2024-05-06" min="1950-01-01" name="fecha_nacimiento" required>
+        <input type="date" max="2024-05-06" min="1950-01-01" name="fecha_nacimiento" id="fNacimiento" required>
         <br><br>
         <label for="">Documentos</label>
-        <input type="file" name="doc" required>
+        <input type="file" name="doc" id="archivo" required>
         <br><br>
-        <button>Enviar</button>
+        <button onclick="enviarFormulario()">Enviar</button>
     </form>
     <hr>
     <br>
@@ -440,6 +440,21 @@
         }
         body.style.backgroundColor=fondo
         body.style.color=letra
+    }
+    function enviarFormulario(){
+        var nombre=document.getElementById("nombre").value
+        var documento=document.getElementById("cedula","tarjeta","extranjeria","pasaporte").value
+        var noIdentificacion=document.getElementById("nDocumento").value
+        var ciudad=document.getElementById("ciudad").value
+        var direccion=document.getElementById("direccion").value
+        var telefono=document.getElementById("telefono").value
+        var email=document.getElementById("correo").value
+        var nacimiento=document.getElementById("fNacimiento").value
+        var archivo=document.getElementById("archivo").value
+        
+        if(nombre && documento){
+            alert("Los datos del formulario son: "+nombre+", "+documento+", "+noIdentificacion+", "+ciudad+", "+direccion+", "+telefono+", "+email+", "+nacimiento+" y "+archivo)
+        }
     }
 </script>
 </html>
