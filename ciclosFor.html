@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CICLOS FOR</title>
+</head>
+<body>
+    
+</body>
+<script>
+/*  for(var i=0; i<=10; i++){
+        document.write("El número es: "+i+"<br>")
+    }*/
+
+    //cronometro//
+/*  for(var crono=10; crono>0; crono--){
+        document.write("tick tack "+crono+"<br>")
+    }
+    document.write("BOOM!!")*/
+
+    //algt para el factorial de un num//
+/*  var num=parseInt(prompt("ingrese un numero"))
+    var factorial=1
+    for(var i=num; i>0; i--){
+        factorial=factorial*i
+    }
+    document.write("el factorial de "+num+" es: "+factorial)*/
+
+    //algt que impr la tabla de * de un # del 1 al 10//
+/*  var num=parseInt(prompt("Ingrese el numero"))
+    var multi
+    for(var i=1; i<=10; i++){
+        multi=i*num
+        document.write(num+" * "+i+" =  "+multi+"<br>")
+    }*/ 
+
+    //algt reciba # e impr sus #menores: cuales son pares/impares y multiplos de 3//
+/*  var num=parseInt(prompt("ingrese el numero"))
+    for(var i=num; i>0; i--){
+        if(i%2==0){
+            document.write(i+" es par <br>")
+        }else{
+            document.write(i+"es impar <br>")
+        }
+        if(i%3==0){
+            document.write(i+" es multiplo de 3 <br>")
+        }
+    }*/
+
+    //algt que determie si un # es primo//
+/*  var num=parseInt(prompt("ingrese el numero"))
+    var contador=0
+    for(var i=1; i<=num; i++){
+        if(num%i===0){
+            contador++
+        }
+    }
+    if(contador>2){
+        document.write("el numero NO es primo")
+    }else{
+        document.write("el numero es primo")
+    }*/
+
+    //algt que cree una escalera de "+" en base al numero ingresado//
+/*  var num=parseInt(prompt("Ingrese el numero"))
+    var escalera="" 
+    for(var i=1; i<=num; i++){
+        escalera+="*" 
+        document.write(escalera +"<br>")
+    }*/
+
+    //algt que reciba un numero de mes y muestre todos los meses anteriores//
+/*  var numeroMes = parseInt(prompt("Ingrese el numero del mes"))
+    for(var i=1; i<=numeroMes; i++){
+    switch(i){
+        case 1:
+            document.write("Enero <br>")
+            break;
+        case 2:
+            document.write("Febrero <br>")
+            break;
+        case 3:
+            document.write("Marzo <br>")
+            break;
+        case 4:
+            document.write("Abril <br>")
+            break;
+        case 5:
+            document.write("Mayo <br>")
+            break;
+        case 6:
+            document.write("Junio <br>")
+            break;
+        case 7:
+            document.write("Julio <br>")
+            break;
+        case 8:
+            document.write("Agosto <br>")
+            break;
+        case 9:
+            document.write("Septiembre <br>")
+            break;
+        case 10:
+            document.write("Octubre <br>")
+            break;
+        case 11:
+            document.write("Noviembre <br>")
+            break;
+        case 12:
+            document.write("Diciembre <br>")
+            break;
+        }
+    }*/
+
+    //algt que cuente los multiplos de 7 entre 1 y 100//
+    var multiplosDe7=0
+    for(var i=1; i<=100; i++){ 
+        if(i%7==0){
+        multiplosDe7++
+        }
+    }
+    document.write("La cantidad de multiplos de 7 es: " + multiplosDe7)
+</script>
+</html>

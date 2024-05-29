@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELEMENTOS JS</title>
+</head>
+<body>
+    <div id="seccion1">
+        SECCIÓN #1
+    </div>
+    <div id="seccion2">
+        SECCIÓN #2
+    </div>
+    <form action="">
+        <label for="">Nombre</label>
+        <input type="text" id="nombre">
+        <label for="">Descripción</label>
+        <textarea id="descripcion" id=""></textarea>
+        <label for="">Seccion</label>
+
+        <button onclick="saludar()">ENVIAR</button>
+        <hr>
+        <select name="" id="seccion_seleccionada">
+            <option value="seccion1">1</option>
+            <option value="seccion2">2</option>
+        </select>
+        <label for="">Tamaño</label>
+        <select name="" id="size">
+            <option value="100px">Pequeño</option>
+            <option value="2000px">Mediano</option>
+            <option value="300px">Grande</option>
+        </select>
+        <button type="button" onclick="cambiarColor('violet')">Lila</button>
+        <button type="button" onclick="cambiarColor('purple')">Uva</button>
+        <button type="button" onclick="cambiarColor('salmon')">Salmón</button>
+        <button type="button" onclick="cambiarColor('deeppink')">Rosado</button>
+        <button type="button" onclick="cambiarColor('darkslateblue')">Morado</button>
+        <button type="button" onclick="cambiarColor('mediumturquoise')">Turquesa</button>
+    </form>
+</body>
+<script>
+    function saludar(){
+        var nombre=document.getElementById("nombre").value
+        var descrip=document.getElementById("descripcion").value
+        alert("Hola "+nombre+"! "+descrip)
+    }
+
+    function cambiarColor(color){
+        var seccionSeleccionada=document.getElementById("seccion_seleccionada").value
+        var tamaño=document.getElementById("size").value
+        document.getElementById("seccionSeleccionada").style.width=tamaño
+        document.getElementById("seccionSeleccionada").style.height=tamaño
+        document.getElementById("seccionSeleccionada").style.backgroundColor= color
+        document.getElementById("seccionSeleccionada").style.color= 'white'
+    }
+</script>
+</html>

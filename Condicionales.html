@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONDICIONALES</title>
+</head>
+<body>
+    
+</body>
+<script>
+    /*var nota=parseInt(prompt("ingrese la nota"))
+    if(nota>=3){document.write("aprobado")} else{document.write("reprobado")}*/
+
+    /*temperatura, si hace frio o si hace frio con base en 20*
+    var temperatura=parseInt(prompt("ingrese el valor de la temperatura"))
+    if(temperatura>20){
+        document.write("está haciendo calor")
+    } else if(temperatura==18){
+            document.write("el clima está templado")
+    } else{
+        document.write("esta haciendo frío")
+    }*/
+
+    /*ingresar estacion, verano y otoño se puede, sino no es apto para sembrar*
+    var estacion=prompt("ingrese la estacion")
+    var msj=""
+    if(estacion=="verano"|| estacion=="otoño"){
+       mensaje="es buen tiempo para sembrar"
+    } else{
+        mensaje="no es buen tiempo para sembrar"
+    }
+    document.write(mensaje)*/
+
+    /*algoritmo 2num para op, validar por el name la op, imprimir el resultado*
+    var operacion= prompt("ingrese el tipo de operacion a realizar")
+    var num1=parseInt(prompt("ingrese el primer numero"))
+    var num2=parseInt(prompt("ingrese el segundo numero"))
+    var igual=0
+    if (operacion=="suma"){
+        resultado=num1+num2
+    }else if(operacion=="resta"){
+        resultado=num1-num2
+    }else if (operacion=="multiplicacion"){
+        resultado=num1*num2
+    }else if (operacion=="division"){
+        resultado=num1/num2
+    }else if (operacion=="potenciacion"){
+        resultado=num1**num2
+    }else if (operacion=="residuo"){
+        resultado=num1%num2
+    }else{
+        document.write("la operacion no está disponible")
+    }
+    document.write("el resultado de la "+operación+" es "+resultado)*/ 
+
+    /*algoritmo de una nota, si es me que 3 imprimir i
+ma o ig a 3 y me 4 imprimir a
+ma o ig a 4 y me que 5 impr s
+ig a 5 impr e
+solo permitir valores netre 0y5*/
+    /*var nota=parseFloat(prompt("ingrese la nota"))
+    var letra=""
+    if(nota>=0 && nota<3){
+        letra="I"
+    }else if(nota>=4 && nota<4){
+        letra="A"
+    }else if(nota>=4 && nota<5){
+        letra="S"
+    }else if(nota=5){
+        letra="E"
+    }else{
+        document.write("la nota no es valida")
+    }
+    if(letra!=""){
+        document.write("la letra asociada a la nota es: "+letra)
+    }*/
+
+    //SWITCH//
+    /*ingresar numero del mes para impr su name*/
+    var numero=parseInt(prompt("ingrese el numero del mes"))
+    var nombre=""
+    if (numero>0 && numero<=12){
+        switch(numero){
+            case 1:nombre="enero"
+            break;
+            case 2:nombre="febrero" 
+            break;
+            case 3:nombre="marzo" 
+            break;
+            case 4:nombre="abril" 
+            break;
+            case 5:nombre="mayo" 
+            break;
+            case 6:nombre="junio" 
+            break;
+            case 7:nombre="julio" 
+            break;
+            case 8:nombre="agosto" 
+            break;
+            case 9:nombre="septiembre" 
+            break;
+            case 10:nombre="octubre" 
+            break;
+            case 11:nombre="noviembre" 
+            break;
+            case 12:nombre="diciembre" 
+            break;
+        }
+        document.write("el mes ingresado es "+nombre)
+    }else{document.write("el numero ingresado no corresponde a ningún mes")}
+</script>
+</html>

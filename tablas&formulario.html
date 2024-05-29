@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas</title>
+</head>
+<body>
+    <table>
+        <tr style="background-color: aquamarine; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+            <th>Nombre</th>
+            <th>Correo</th>
+            <th>Ciudad</th>
+            <th>Edad</th>
+            <th>Profesión</th>
+        </tr>
+        <tr style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: azure;">
+            <td>Laura Sofia</td>
+            <td>laus@gmail.com</td>
+            <td>Manizales</td>
+            <td>23</td>
+            <td>Diseñadora grafica</td>
+        </tr>
+        <tr style="background-color: #8576FF;">
+            <td>James Nicolás</td>
+            <td>jamn@gmail.com</td>
+            <td>Facatativa</td>
+            <td>21</td>
+            <td>Psicologo</td>
+        </tr>
+        <tr style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+            <td>Jesús Alberto</td>
+            <td>jesa@gmail.com</td>
+            <td>Monterrey</td>
+            <td>19</td>
+            <td>Tecnico en plasticos</td>
+        </tr>
+        <tr style="background-color: #FFCBCB;">
+            <td>Erick Ariel</td>
+            <td>eria@gmail.com</td>
+            <td>Guayaquil</td>
+            <td>25</td>
+            <td>Guardia de seguridad</td>
+        </tr>
+        <tr style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            <td>Karen Tatiana</td>
+            <td>kart@gmail.com</td>
+            <td>Bogotá</td>
+            <td>20</td>
+            <td>Programadora</td>
+        </tr>
+        <tr style="background-color: #7BC9FF;">
+            <td>Juan David</td>
+            <td>juad@gmail.com</td>
+            <td>Arauca</td>
+            <td>23</td>
+            <td>Plomero</td>
+        </tr>
+        <tr style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+            <td>Irma Clarena</td>
+            <td>irmc@gmail.com</td>
+            <td>Restrepo</td>
+            <td>45</td>
+            <td>Costurera</td>
+        </tr>
+        <tr style="background-color: #135D66;">
+            <td>Luis Fernando</td>
+            <td>luif@gmail.com</td>
+            <td>Honda</td>
+            <td>32</td>
+            <td>Profesor</td>
+        </tr>
+        <tr style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+            <td>Juan Diego</td>
+            <td>diej@gmail.com</td>
+            <td>Villavicencio</td>
+            <td>36</td>
+            <td>Conductor</td>
+        </tr>
+        <tr style="background-color: #FF407D;">
+            <td>José Orlando</td>
+            <td>joso@gmail.com</td>
+            <td>Medellín</td>
+            <td>65</td>
+            <td>Pastelero</td>
+        </tr>
+    <style>
+        tr{background-color: #E1AFD1;}
+    </style>
+    </table>
+    <br>
+    <form method="post">
+        <label for="">Nombre</label>
+        <input type="text" placeholder="Nombre" required name="nombre">
+        <br>
+        <label for="">Fecha de nacimiento</label>
+        <input type="date" required max="2024-05-02" min="1900-01-01" value="2024-05-02" name="fecha_nacimiento">
+        <br>
+        <label for="">Ingresos mensuales</label>
+        <input type="number" placeholder="Ingrese su salario mensual" name="salario">
+        <br>
+        <label for="">Correo electrónico</label>
+        <input type="email" placeholder="Ingresar email" required name="email">
+        <br>
+        <label for="">Subir CV</label>
+        <input type="file" required name="CV">
+        <br>
+        <label for="">Contraseña</label>
+        <input type="password" placeholder="Contraseña" required name="password">
+        <br>
+        <label for="">Hora de ingreso</label>
+        <input type="time" required name="hora_ingreso">
+        <br>
+        <label for="">Mes de ingreso a la empresa</label>
+        <input type="month" required name="mes_entrada">
+        <br>
+        <label for="">Color de uniforme</label>
+        <input type="color" required name="uniforme">
+        <br>
+        <label for="">Genero</label>
+        <input type="radio" name="Genero" value="F" required>
+        <label for="">Femenino</label>
+        <input type="radio" name="Genero" value="M" required>
+        <label for="">Masculino</label>
+        <br>
+        <label for="">Días laborados</label>
+        <input type="checkbox" name="días" value="1">
+        <label for="">Lunes</label>
+        <input type="checkbox" name="días" value="2">
+        <label for="">Martes</label>
+        <input type="checkbox" name="días" value="3">
+        <label for="">Miercoles</label>
+        <input type="checkbox" name="días" value="4">
+        <label for="">Jueves</label>
+        <input type="checkbox" name="días" value="5">
+        <label for="">Viernes</label>
+        <br>
+        <label for="">Link de linkedin</label>
+        <input type="url" placeholder="Ingresar url del perfil de linkedin" required name="linkedin">
+        <br>
+        <label for="">Telefono</label>
+        <input type="tel" placeholder="Ingrese # de telefono" required name="telefono">
+        <br>
+        <label for="">Escoja una ciudad</label>
+        <select name="ciudad" id="">
+            <option value="">-</option>
+            <option value="">Bogotá</option>
+            <option value="">Manizales</option>
+            <option value="">Villavicencio</option>
+            <option value="">Medellín</option>
+        </select>
+        <br>
+        <fieldset>
+            <legend>Información general</legend>
+            <label for="">Descripción de perfil</label>
+            <textarea name="descripcion" id=""  cols="40" rows="5"></textarea> <br>
+            <label for="">Tipo de documento</label>
+            <input list="Documento" name="documento">
+            <datalist id="documento">
+                <option value="Cedula">Cedula</option>
+                <option value="Tarjeta de identidad">Tarjeta de identidad</option>
+                <option value="Pasaporte">Pasaporte</option>
+            </datalist> 
+            <br>
+            <label for="">Cedula</label>
+            <input type="text" name="cedula">
+        </fieldset>
+        <br>
+        <button>Enviar</button>
+    </form>
+</body>
+</html>

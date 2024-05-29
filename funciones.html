@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUNCIONES</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function saludar(nombre, apellido){
+        document.write("Hola!!"+nombre+" "+apellido+" :3 <br>")
+    }
+    function despedirse(nombre) {
+        document.write("Adios "+nombre+"! ^^ <br>")
+    }
+    
+    //implementar una calculadora usando funciones
+/*  function suma(num1, num2) {
+        return num1+num2
+    }
+    function resta(num1, num2) {
+        return num1-num2
+    }
+    function multi(num1, num2) {
+        return num1*num2
+    }
+    function division(num1, num2) {
+        return num1/num2
+    }
+
+  var n1=parseInt(prompt("ingrese el primer numero"))
+    var n2=parseInt(prompt("ingrese el segundo numero"))
+    var operacion=prompt("cual es la operació a realizar?")
+    var resultado=0
+
+    switch (operacion) {
+        case "suma":
+            resultado=suma(n1, n2)
+            break;
+        case "resta":
+            resultado=resta(n1, n2)
+            break;
+        case "multiplicacion":
+            resultado=multi(n1, n2)
+            break;
+        case "division":
+            resultado=division(n1, n2)
+            break;
+    }
+    document.write("el resultado de la "+operacion+" es: "+resultado)*/
+
+    //implementar una funcion que por un numero me diga a que mes pertenece
+/*  function valMes(numero){
+        var mes=""
+        switch(numero){
+            case 1:mes="Enero"
+            break;
+            case 2:mes="Febrero" 
+            break;
+            case 3:mes="Marzo" 
+            break;
+            case 4:mes="Abril" 
+            break;
+            case 5:mes="Mayo" 
+            break;
+            case 6:mes="Junio" 
+            break;
+            case 7:mes="Julio" 
+            break;
+            case 8:mes="Agosto" 
+            break;
+            case 9:mes="Septiembre" 
+            break;
+            case 10:mes="Octubre" 
+            break;
+            case 11:mes="Noviembre" 
+            break;
+            case 12:mes="Diciembre" 
+            break;
+        }
+        return mes
+    }
+    document.write(valMes(7))
+    document.write(valMes(1))
+    document.write(valMes(9))
+    document.write(valMes(10))
+    document.write(valMes(9))*/ 
+
+    //funcion que reciba 4 num y muestre el prom
+    function promedio(num1, num2, num3, num4){
+        return (num1+num2+num3+num4)/4
+    }
+    var resultado=promedio(5, 12, 9, 8)
+    document.write("el promedio es: "+resultado+"<br>")
+
+    //funcion que reciba un num y despliegue el factorial
+    function factorial(num) {
+        var calc=1;
+        for(var i=num; i>0; i--){
+            calc=calc*i
+        }
+        return calc
+    }
+    var calcFactorial = factorial(7)
+    document.write("el factorial es: "+calcFactorial+"<br>")
+
+    //funcion que reciba una edad y retorne si es apto para votar
+    function aptoVotar(edad) {
+        if(edad>=18){
+            return "si"
+        }else{
+            return "no"
+        }
+    }
+    var validarEdad=aptoVotar(14)
+    document.write("es apto para votar?: "+validarEdad+"<br>")
+
+    //funcion con array y retorne el num más alto
+    function numMax(array) {
+        var mayor=array[0]
+        for(var i=0; i<=array.length; i++){
+            if(array[i]>mayor){
+                mayor=array[i]
+            }
+        }
+        return mayor
+    }
+    var numeros=[110, 54, 85, 900, 45, 78]
+    document.write("el numero mayor es el: "+numMax(numeros)+"<br>")
+
+    //funcion con array y retorne el num más bajo
+    function numMin(array) {
+        var menor=array[0]
+        for(var i=0; i<=array.length; i++){
+            if(array[i]<menor){
+                menor=array[i]
+            }
+        }
+        return menor
+    }
+    var numeros=[110, 54, 85, 900, 45, 78]
+    document.write("el numero menor es el: "+numMin(numeros)+"<br>")
+
+    //funcion array y retorne su segundo elemento
+    function segundoElemento(array){
+        return array[1]
+    }
+    var numeros=[110, 54, 85, 900, 45, 78]
+    document.write("el segundo elemento es: "+segundoElemento(numeros))
+</script>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CICLOS</title>
+</head>
+<body>
+
+</body>
+<script>
+    //algoritmo que impr # del 1 al 10//
+/*  var contador=1;
+    document.write("Inicio <br>")
+    while (contador<=10) {
+        document.write(contador+"<br>")
+        contador++
+    } //se ejecuta mientras la condicion sea verdadera//
+    document.write("Final")*/ 
+
+    //algoritmo que pide palabras y n se detiene hasta que ingrese "parar"//
+/*  var palabra=""
+    while (palabra !="parar") {
+        palabra=prompt("Ingrese una palabra")
+        document.write(palabra+"<br>")
+    }*/
+
+    //alg # que sume con los anteriores, hasta que el total sea >=20//
+/*  var suma=0
+    while (suma<20) {
+        var num=parseInt(prompt("Ingrese un numero"))
+        document.write(num+"<br>")
+        suma=suma+num
+    } */
+
+    //alg que pida # solo si es par, detenerse cuando se ingrese el 0//
+/*  var num
+    var suma=0
+    while (num !=0) {
+        num=parseFloat(prompt("ingrese un numero"))
+        document.write(num+"<br>")
+        if(num%2==0){
+            suma=suma+num
+        }
+    }
+   document.write("la suma es: "+suma)*/
+
+   //alg que ingres un num hasta adivinar uno predeterminado//
+/*  var num
+    while (num !=24) {
+        num=parseInt(prompt("ingrese el numero oculto"))
+        document.write(num+"<br>")
+    }
+    document.write("Correcto! El número oculto es "+num) */ 
+
+//EJERCICIOS//
+
+    //sumar hasta 50//
+/*  var suma=0
+    while (suma<=50) {
+        var num=parseInt(prompt("Ingrese un numero"))
+        suma=suma+num
+    }
+    document.write("total: "+suma)*/
+
+    //mas allá de 42// 
+/*  var numero=0
+    while(numero<42){
+        numero=parseInt(prompt("Ingrese un numero:"))
+        document.write(numero+'<br>')
+    }
+    document.write("El ciclo ha terminado")*/
+   
+    //sumas consecutivas//
+/*  var num1=parseInt(prompt("Ingrese el num1"))
+    var num2=parseInt(prompt("Ingrese el numero 2"))
+    var total=num1+num2
+    var preguntaPorNuevoNumero=prompt("Quiere ingresar otro numero")
+    while(preguntaPorNuevoNumero=="si"){
+        var numero=parseFloat(prompt("Ingrese el nuevo numero"))
+        total=total+numero
+        preguntaPorNuevoNumero=prompt("Quiere ingresar otro numero")
+    }
+    document.write("El total es: "+total)*/
+
+    //lista de invitados//
+/*  var nombre=prompt("Ingrese el nombre de su invitado:")
+    var contador=1
+    var añadir=prompt("¿Añadir un nuevo invitado?")
+    while(preguntarPorOtroAmigo == "si"){
+        nombre=prompt("Ingrese el nombre de su invitado:")
+        contador++
+        añadir=prompt("¿Añadir un nuevo invitado?")
+    }
+    document.write("La cantidad de amigos invitados es: ", contador)*/ 
+
+    //un elefante se balanceaba//
+/*  var texto=" se balanceaba sobre la tela de una araña, como veia que resistia fue a llamar otro elefante"
+    var cantidad=parseInt(prompt("Ingrese los elefantes"))
+    var contador=1
+    var pElefante="Elefante"
+    while(contador<=10){
+        if(contador !=1){
+            pElefante="Elefantes"
+        }
+        document.write(contador+" "+pElefante+" "+texto+"<br>")
+        contador++
+    }*/
+
+//21 de mayo//
+    //algoritmo cuenta regresiva y el final impr BOOM//
+/*  var crono=10
+    while (crono>=0) {
+        document.write("tick tock"+crono+"<br>")
+        crono--
+    }
+    document.write("BOOM!!!")*/ 
+
+    //cuenta regresiva para despegue, empezar en 15-despegue en:, cuenta en 10-encender motores, cuenta en 0-despegue//
+/*  var crono=15
+    while (crono>=0) {
+        document.write("Despegue en: "+crono+"<br>")
+        if(crono==10){
+            document.write("Encendiendo motores <br>")
+        }
+        crono--
+    }
+    document.write("Despegue!")*/ 
+
+    
+</script>
+</html>

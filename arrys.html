@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAYS</title>
+</head>
+<body>
+    
+</body>
+<script>
+/*  var estudiantes=["jesus", "karen", "laura"]
+    var notas=[3.5, 4, 2.4]
+    var frutas=["fresa", "piña", "mango", "manzana"]
+    document.write(frutas[2])
+    document.write("<br>")
+    document.write("la longitud del array es: "+frutas.length)*/
+
+    //agg elementos//
+/*  var clientes=["pepe", "juana", "pepita"]
+    clientes.push("pancracio")
+    document.write(clientes)
+    document.write("<br>")
+
+    //ban elemento//
+    clientes.pop()//elina el ultimo elemento//
+    clientes.splice(0,1)//elimina desde una pasición especifica una cantidad determinada de elementos//
+    document.write(clientes)
+    document.write("<br>")
+
+    //ordenar//
+    clientes.sort()
+    clientes.reverse()//ordena en sentido contrario
+    document.write(clientes)*/
+
+    //EJERCICIOS
+    //paises
+    //cuidades                     mostrar longitud
+    //departamentos
+    //universidades
+
+/*  var pais=["alemania", "tailandia", "colombia", "mexico", "chile"]
+    var depa=["meta", "cundinamarca", "santander"]
+    var city=["bogotá", "santa marta", "villavicencio", "medellin"]
+    var uni=["distrital", "nacional", "cun", "areandina", "piloto", "andes"]
+    document.write(pais)
+    document.write("<br>")
+    document.write("la longitud del array es: "+pais.length+"<br>")
+    document.write(depa)
+    document.write("<br>")
+    document.write("la longitud del array es: "+depa.length+"<br>")
+    document.write(city)
+    document.write("<br>")
+    document.write("la longitud del array es: "+city.length+"<br>")
+    document.write(uni)
+    document.write("<br>")
+    document.write("la longitud del array es: "+uni.length+"<br>")*/
+
+    //crear con 5 notas y obtener el promedio
+/*  var notas=[2.4, 5, 3.5, 4.7, 3]
+    var acumulado=0
+    for(var i=0; i<notas.length; i++){
+        acumulado=acumulado+notas[i]
+    }
+    var promedio=acumulado/notas.length
+    document.write("el promedio es: "+promedio)*/
+
+    //algr de 5 pj, agg al array invitados, impr nombres y la cantidad
+/*  var cantidad=parseInt(prompt("ingrese la cantidad de invitados deseada"))
+    var nombre
+    var invitados=[]
+    for(var i=0; i<cantidad; i++){
+        nombre=prompt("ingrese el nombre del invitado")
+        invitados.push(nombre)
+    }
+    document.write("los invitados son: "+invitados+"<br>")
+    document.write("el total de invitados es: "+invitados.length)*/
+
+    //algr que imprima los elementos del array en una linea independiente
+/*  var equipos = ["Millonarios", "Santa fé", "Nacional", "America"]
+    for(var i=0; i<equipos.length; i++){
+        document.write(equipos[i] + "<br>")
+    }*/ 
+    
+    //sumar los elementos del array
+/*  var ventas = [115, 224, 1500, 800, 3241]
+    var total=0
+    for(var i=0; i<ventas.length; i++){
+        total+=ventas[i]
+    }
+    document.write("El total de ventas fue: " + total)*/ 
+
+    //encontrar el valor maximo
+/*  var notas = [3.1, 3.3 , 4, 1.2]
+    var notaMaxima=notas[0] 
+    for(var i=0; i<notas.length; i++){
+        if(notas[i]>notaMaxima){ 
+            notaMaxima=notas[i] 
+        }
+    }
+    document.write("La nota maxima es: " + notaMaxima + "<br>")*/ 
+
+    //impr los numeros del array que sean multiplos de 4
+    var numeros = [2, 3, 16, 24, 36, 48, 62, 80, 100]
+    for(var i=0; i<numeros.length; i++){
+        if(numeros[i]%4 == 0){
+            document.write("El numero " + numeros[i] + " es multiplo de 4 <br>")
+        }
+    } 
+    //MATRICES
+/*  var matriz=[
+        [3.5, 2.3, 5, 4.7]
+        [4.5, 4, 3.6, 0.5]
+        [2.4, 3, 2, 2.9]
+        [4.7, 1.3, 3.1, 4.5]
+    ]
+    var notaPeriodo=0
+    var acumulado=0
+    for(var i=0; i<matriz.length; i++){
+        document.write(matriz[i]+"<br>")
+        for(var m=0; m<matriz[i].length; m++){
+         notaPeriodo=notaPeriodo+matriz[i][m]
+        }
+        notaPeriodo=notaPeriodo/matriz[i].length
+        document.write("la nota del periodo "+i+" es: "+notaPeriodo+"<br>")
+        acumulado=acumulado+notaPeriodo
+        notaPeriodo=0
+    }
+    document.write("la nota final es: "+acumulado/matriz.length)*/ 
+
+    
+</script>
+</html>

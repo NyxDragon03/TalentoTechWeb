@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Colores y alineamiento</title>
+    <!-- importación de archivos para complementar la pag -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="color1 lados margen">
+        elemento 1
+    </div>
+    <br>
+    <div class="color2 lados padding">
+        elemento 2 <i class="fa-solid fa-poo"></i>
+    </div>
+    <br>
+    <div>
+        <h1 class="alineacion">TITULO</h1>
+        <p class="sombra">Their hit single, HOLOGRAM, went viral on TikTok with almost 4M views on a single video. The video used recent trends with AI and bots to promote the song, as does the HOLOGRAM music video. Whoever you are and wherever you are from, welcome to the Poe Fam!</p>
+    </div>
+    <br>
+    <button>pollito pio <i class="fa-sharp fa-solid fa-fire"></i></button>
+    <br>
+    <a href="https://colorhunt.co/" class="enlace" target="_blank">color hunt</a>
+    <div>
+        <h1>LISTA</h1>
+        <ul>
+            <li>papitas</li>
+            <li>salsas</li>
+            <li>costillas</li>
+            <li>queso</li>
+        </ul>
+    </div>
+
+    <div>
+        <h1>TABLA</h1>
+        <table id="estilo-tabla">
+            <tr>
+                <th>Nombre</th>
+                <th>Ciudad</th>
+                <th>Correo</th>
+            </tr>
+            <tr>
+                <td>Jesus</td>
+                <td>Cali</td>
+                <td>jesus@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Laura</td>
+                <td>Manizales</td>
+                <td>lau@gmail.com</td>
+            </tr>
+            <tr>
+                <td>James</td>
+                <td>Bogotá</td>
+                <td>james@gmail.com</td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <div>
+        <h1>POSICIONAMIENTO</h1>
+        <div class="relative">
+            RELATIVO
+            <div class="absolute">
+                ABSOLUTO
+                <div class="fixed">
+                    FIJADO
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, consectetur dicta. Dolorum, beatae accusantium eaque, excepturi cupiditate iste ex illum dolores voluptatum tempore modi voluptates accusamus odit reprehenderit? Eius, totam!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <h1>FLOTANTE</h1>
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo laboriosam consequuntur nulla, dicta obcaecati, sed dolor exercitationem odio eaque harum qui ratione ut. Molestias cupiditate nam rerum veritatis nobis dolorem.
+                <img class="float" src="https://i.pinimg.com/564x/91/79/a0/9179a044391c083e7135b824e554c696.jpg" alt="">
+            </p>
+            
+        </div>
+    </div>
+<br>
+    <div>
+        <h1>IMAGENES</h1>
+        <img class="img1" src="https://i.pinimg.com/564x/2c/95/e8/2c95e8d93c174bc762258ac9f6fb3071.jpg" alt="">
+
+        <img class="img2" src="https://i.pinimg.com/564x/fc/c8/df/fcc8df3da2e52c7d5b7eae7ce000f9a2.jpg" alt="">
+
+        <img class="img3" src="https://i.pinimg.com/564x/17/7e/85/177e8550a84e263d3d79f8b80af627de.jpg" alt="">
+    </div>
+    <br>
+    <div class="transition">
+        <h1>TRANSICIONES</h1>
+    </div>
+    <br>
+    <div class="animation">
+        <h1>ANIMACIONES</h1>
+    </div>
+    <br>
+
+    <form action="">
+        <label for="">Nombre</label>
+        <input type="text" placeholder="Nombre"> <br>
+        <label for="">Descripción</label>
+        <textarea name="" id=""></textarea><br>
+        <label for="">País</label>
+        <select name="" id="">
+            <option value="">-</option>
+            <option value="">Colombia</option>
+            <option value="">Canadá</option>
+            <option value="">México</option>
+        </select><br>
+        <button>enviar</button>
+    </form>
+
+    <h1>GRID</h1>
+    <div class="grid">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+    </div>
+</body>
+
+<style>
+    .color1{
+        background-color: tomato;
+        color: #EEF7FF;
+        border: solid; 
+        border-color: rgb(255, 118, 206);
+        border-width: 3px;
+        opacity: 0.5;
+        margin: 30px 0px 0px 60px
+    }
+    .color2{
+        
+        width: 80%;
+        height: 300px;
+        background-image: url(https://i.pinimg.com/564x/4f/d4/e7/4fd4e7a94dee13e8f986c2c1e0271e71.jpg);
+        background-repeat: no-repeat;
+        background-size: 450px;
+        font-size: 100px;
+        color: #008170;
+        margin-left: 25px;
+    }
+
+    .lados{
+        border-style: dashed dotted dashed solid;
+        border-width: 7px;
+        border-color: #5D0E41;
+        border-radius: 50px;
+        outline-style: double;
+        outline-color: #1D24CA;
+        outline-width: 10px;
+    }
+
+    .margen{
+        margin: 30px 0px 0px 60px
+    }
+
+    .padding{
+        padding-top: 40px;
+        padding-right: 25px;
+        padding-bottom: 5px;
+        padding-left: 25px;
+    }
+
+    .alineacion{
+        text-align: center;
+        direction: rtl;
+        unicode-bidi: bidi-override;
+        text-decoration-line: underline;
+        text-decoration-color: aqua;
+        text-decoration-style: wavy;
+        text-decoration-thickness: 10px;
+        letter-spacing: 5px;
+        text-transform: lowercase;
+    }
+
+    .sombra{
+        text-shadow: 4px 2px #7752FE;
+        font-family: cursive;
+        font-size: 60px;
+        font-weight: bolder;
+    }
+
+    .enlace{
+        font-size: 60px;
+        color: #FFA1AC;
+        text-decoration: none;
+        padding: 5px;
+        border-style: dashed;
+        border-radius: 80px;
+        border-color: #7B6CF6;
+        cursor: crosshair;
+        text-align: center;
+        display: inline-block;
+    }
+
+    .enlace:hover{
+        color:  #A3FFD6;
+        background-color: black;
+    }
+
+    .enlace:active{
+        color: #8576FF;
+    }
+
+    ul>li{
+        list-style-type: georgian;
+        background-color: #8576FF;
+        display: inline;
+        visibility: hidden;
+    }
+
+    ul{
+        background-color: #7752FE;
+        opacity: 0.8;
+        padding: 20px;
+    }
+
+    table#estilo-tabla{
+        border: 1px solid;
+        width: 70%;
+        text-align: center;
+        border-collapse: collapse;
+    }
+
+    th, td{
+        border: 1px solid;
+        padding: 10px;
+        border-color: #FF005C;
+    }
+
+    table#estilo-tabla tr:nth-child(even){
+        background-color: #F78CA2;
+    }
+
+    table#estilo-tabla tr:hover{
+        background-color: #8FD6E1;
+        color: #FFF5E0;
+    }
+
+    table#estilo-tabla th{
+        background-color: #1C1678;
+        color: #A3FFD6;
+    }
+
+    /*se adapta a la posicion del mayor*/
+    .relative{
+        border: 3px solid #FF005C;
+        width: 400px;
+        height: 200px;
+        position: relative;
+    }
+
+
+/*mantiene una posicion fija*/
+    .absolute{
+        border: 6px dotted #5D0E41;
+        width: 200px;
+        height: 100px;
+        right: 0;
+        top: 80px;
+        position: absolute;
+        text-align: right;
+    }
+
+    .fixed{
+        border: 5px dashed #7752FE;
+        width: 300px;
+        height: 50px;
+        left: 0;
+        top: 200px;
+        position: fixed;
+        background-color: #8576FF;
+        /*desplazamiento/desbordado      */
+        overflow: auto;
+    }
+
+    .float{
+        width: 125px;
+        height: 150px;
+        float: left;
+    }
+
+    /*pseudo elemento*/
+    h1::first-letter{
+        color: #F78CA2;
+        background-color: #1C1678;
+        font-size: 70px;
+    }
+
+    .img1{
+        width: 30%;
+        border-radius: 50px;
+        border: 3px dotted #C73659;
+        padding: 10px;
+        outline: 8px solid #008170;
+    }
+    
+    .img2{
+        width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 10px;
+        box-shadow: 30px 10px 30px 10px #C73659;
+    }
+    
+    .img3{
+        width: 80%;
+        display: block;
+        margin-top: 50px;
+        filter: blur(5px); /*difuminar*/
+        filter: brightness(200%);/*brillo*/
+        filter: contrast(130%);/*contraste*/
+        filter: grayscale(80%);/*escala de grises*/
+        filter: hue-rotate(180deg);/*escala de color*/
+        filter: invert(60%);/*inversion de colores*/
+        filter: saturate(5);/*saturación*/
+        filter: sepia(50%);/*sepia*/
+        filter: opacity(50%);/*opacidad*/
+    }
+
+    .img3:hover{
+        width: 90%;
+        transition: width 2s height 2s;
+    }
+
+    .transition{
+        background-color: #C73659;
+        width: 20%;
+        height: 100px;
+        transition: width 2s transform 2s;
+        transition-timing-function: linear;
+        transition-timing-function: ease;
+        transition-timing-function: ease-in;
+        transition-timing-function: ease-out;
+        transition-delay: 1s;
+    }
+
+    .transition:hover{
+        width: 40%;
+        transform: scale(0.5) translate(-100%, -100%);
+        /*transform: rotate(90deg);
+        transform: translate(120px, 50%);*/
+    }
+
+    .animation{
+        width: 25%;
+        height: 100px;
+        background-color: #7752FE;
+        position: relative;
+        animation-name: ejemplo;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes ejemplo{
+        0% {border-radius: 5px; background-color: #7752FE; left: 0; top: 0;}
+        25% {border-radius: 25px; background-color: #1D24CA; left: 200px; top: 0;}
+        50% {border-radius: 50px; background-color: #008170; left: 200px; top: 200px;}
+        75% {border-radius: 25px; background-color: #D862BC; left: 0; top: 200px;}
+        100% {border-radius: 5px; background-color: #7752FE; left: 0; top: 0;}
+    }
+
+    input,textarea,select{
+        width: 100%;
+        padding: 15px 20px;
+        margin: 8px;
+        display: inline-block;
+        border: 1px solid #5D0E41;
+        border-radius: 10px;
+        box-sizing: border-box;
+    }
+
+    button{
+        border-radius: 5px;
+        background-color: #11dc9c;
+        padding: 10px;
+        width: 100%;
+        margin: 8px;
+        border: none;
+        cursor: pointer;
+    }
+
+    button:hover{
+        background-color: #dc117d;
+    }
+
+    label{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin: 5px;
+        font-weight: bold;
+    }
+
+    .grid{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 10px;
+        background-color: #8FD6E1;
+        padding: 10px;
+    }
+
+    .grid>div{
+        background-color: #11dc9c;
+        text-align: center;
+        padding: 20px;
+        font-size: 30px;
+    }
+
+    @media screen and (min-width: 600px){
+        button{
+            width: 50%;
+            background-color: #8576FF;
+        }    
+    }
+</style>
+</html>

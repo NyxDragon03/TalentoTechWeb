@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LABORATORIO 3</title>
+</head>
+<body>
+</body>
+<script>
+    //numero positivo, negativo o cero//
+/*    var numero=parseInt(prompt("Ingrese un número"))
+    var mensaje=""
+    if (numero<0){
+        mensaje="NEGATIVO"
+    }else if(numero==0){
+        mensaje="CERO"
+    }else if(numero>0){
+        mensaje="POSITIVO"
+    }
+    document.write("El  número ingresado es "+ mensaje)    */
+
+    //numero par o impar//
+/*  var numero=parseInt(prompt("Ingrese un número"))
+    var residuo=numero%2
+    if (residuo==0){
+        document.write("El número ingresado es PAR")
+    }else{
+        document.write("El número ingresado es IMPAR")
+    }                                                        */
+
+    //edad para votar//
+/*  var edad=parseInt(prompt("Ingrese su edad"))
+    var mensaje=""
+    if (edad<18){
+        mensaje="no es apto"
+    }else if(edad>=18){
+        mensaje="es apto"
+    }
+    document.write("El individuo "+mensaje+" para votar")     */
+
+    //determinar el mayor//
+/*  var n1=parseInt(prompt("Ingrese un número"))
+    var n2=parseInt(prompt("Ingrese un segundo número"))
+    if (n1<n2){
+        document.write(n2+" es mayor que "+n1)
+    }else if (n1>n2){
+        document.write(n1+" es mayor que "+n2)
+    }else{
+        document.write("Ninguno es mayor")
+    }                                                          */
+
+    //descuento//
+/*  var compra=parseInt(prompt("Ingrese el valor de su compra"))
+    var descuento=compra*0.1
+    var total=compra-descuento
+    if (compra<=100){
+        document.write("El total de su compra es $"+compra)
+    }else if (compra>100){
+        document.write("El total de su compra es $"+total)
+    }                                                          */
+
+    //convertir # en dia//
+/*  var num=parseInt(prompt("Ingrese un número para el día"))
+    var nombre=""
+    if (num>0 && num<=7){
+        switch(num){
+            case 1:nombre="Lunes"
+            break;
+            case 2:nombre="Martes" 
+            break;
+            case 3:nombre="Miércoles" 
+            break;
+            case 4:nombre="Jueves" 
+            break;
+            case 5:nombre="Viernes" 
+            break;
+            case 6:nombre="Sábado" 
+            break;
+            case 7:nombre="Domingo" 
+            break;
+        }
+        document.write("El día ingresado es "+nombre)
+    }else{document.write("El numero ingresado no corresponde a ningún día")}  */
+
+    //estacion segun el mes//
+    var mes=prompt("Ingrese el mes")
+    var estacion=""
+    if (mes="enero" && "febrero" && "marzo" && "abril" && "mayo" && "junio" && "julio" && "agosto" && "septiembre" && "octubre" && "diciembre"){
+        switch(mes){  
+            case "marzo" || "abril" || "mayo":estacion="primavera"  
+            break;
+            case "junio" || "julio" || "agosto":estacion="verano" 
+            break;
+            case "septiembre" || "octubre" || "noviembre":estacion="otoño" 
+            break;
+            case "diciembre" || "enero" || "febrero":estacion="invierno" 
+            break;
+        }
+    }
+    document.write("La estación que corresponde al mes de "+mes+" es "+estacion)
+</script>
+</html>
