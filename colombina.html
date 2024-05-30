@@ -15,7 +15,13 @@
         </select>
     </div>
     <div class="logo" style="text-align: center;">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW5_iwxHhDQG9msePLjPBkrpWGoo699MRfr2YkniMXtA&s" alt="">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW5_iwxHhDQG9msePLjPBkrpWGoo699MRfr2YkniMXtA&s" alt="Logo colombina" id="logo">
+        <select onchange="cambiarLogo(value)">
+            <option value="small">Pequeño</option>
+            <option value="medium">Normal</option>
+            <option value="large">Grande</option>
+            <option value="xlarge">Muy Grande</option>
+        </select>
     </div>
     <h1 class="poetsen-one-regular">El sabor es infinito!!</h1>
      <div>
@@ -267,7 +273,6 @@
         .logo img{
             border: outset 5px #f62c2c;
             border-radius: 90px;
-            width: 500px;
             margin-top: 20px;
             padding: 8px;
         }
@@ -435,8 +440,8 @@
             fondo="black"
             letra="white"
         }else if(tema == "crazy"){
-            fondo="#0c0075"
-            letra="#C40C0C"
+            fondo="#27005D"
+            letra="#F11A7B"
         }
         body.style.backgroundColor=fondo
         body.style.color=letra
@@ -455,6 +460,20 @@
         if(nombre && documento){
             alert("Los datos del formulario son: "+nombre+", "+documento+", "+noIdentificacion+", "+ciudad+", "+direccion+", "+telefono+", "+email+", "+nacimiento+" y "+archivo)
         }
+    }
+    function cambiarLogo(tamano){
+        var logo=document.getElementById("logo")
+        var tamanoLogo=0
+        if (tamano=="small"){
+            tamanoLogo=250
+        }else if (tamano=="medium"){
+            tamanoLogo=500
+        }else if (tamano=="large"){
+            tamanoLogo=750
+        }else if (tamano=="xlarge"){
+            tamanoLogo=1000
+        }
+        logo.width=tamanoLogo
     }
 </script>
 </html>
