@@ -1,0 +1,65 @@
+[
+    {
+        "nombre": "Laura",
+        "apellidos": "Guzman",
+        "edad": 22,
+        "mascotas":[
+            {
+                "nombre": "Mango",
+                "tipo": "gato"
+            }
+        ]
+    },
+    {
+        "nombre": "Isaac",
+        "apellidos": "Lopez",
+        "edad": 20,
+        "mascotas":[
+            {
+                "nombre": "Mishi",
+                "tipo": "gato"
+            }
+        ]
+    },
+    {
+        "nombre": "Jesus",
+        "apellidos": "Vazquez",
+        "edad": 19,
+        "mascotas":[
+            {
+                "nombre": "Florinda",
+                "tipo": "perro"
+            }
+        ]
+    },
+    {
+        "nombre": "Brandon",
+        "apellidos": "Osorio",
+        "edad": 16,
+        "mascotas":[
+            {
+                "nombre": "Oso",
+                "tipo": "perro"
+            }
+        ]
+    },
+    {
+        "nombre": "Aldo",
+        "apellidos": "Toro",
+        "edad": 21,
+        "mascotas":[
+            {
+                "nombre": "Moly",
+                "tipo": "gato"
+            },
+            {
+                "nombre": "Pimienta",
+                "tipo": "gato"
+            },
+            {
+                "nombre": "Garfield",
+                "tipo": "gato"
+            }
+        ]
+    }
+]
