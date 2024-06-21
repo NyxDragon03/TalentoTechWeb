@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fomr users</title>
+</head>
+<body>
+    <form id="guardarUsuario">
+        <label for="nombre">Nombre</label>
+        <input type="text" placeholder="Ingrese su nombre" id="nombre" required>
+        <br>
+        <label for="apellido">Apellido</label>
+        <input type="text" placeholder="Ingrese su apellido" id="apellidos" required>
+        <br>
+        <label for="correo">Correo</label>
+        <input type="email" placeholder="Ingrese su correo" id="correo" required>
+        <br>
+        <label for="contraseña">Contraseña</label>
+        <input type="password" placeholder="Ingrese su contraseña" id="password" required>
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+    <br>
+
+</body>
+<script>
+    //ejecuta la acción cuando carga la pagina
+    document.addEventListener('DOMContentLoaded', function(){
+        //accece a la info de la etiqueta form
+        const form = document.getElementById('guardarUsuario')
+        //ejecutar acción al enviar formulario
+        form.addEventListener('submit', function(event){
+            event.preventDefault(); //evita que la pagina haga f5 al enviar
+            //se crea el objeto que se va a almacenar
+            const data = {
+                nombre: document.getElementById('nombre').value,
+                apellidos: document.getElementById('apellidos').value,
+                correo: document.getElementById('correo').value,
+                password: document.getElementById('password').value
+            }
+            
+            fetch('http://localhost:3000/usuario/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => {
+                return response.json()
+            })
+            .then(data => {
+                if(data.status=="success"){
+                    alert('Usuario registrado exitosamente')
+                    window.location.href = "./list.html";
+                }else{
+                    alert('Registro de usuario fallido')
+                }
+            })
+            .catch(error => console.log("Error: ", error))
+        })
+    })
+</script>
+</html>

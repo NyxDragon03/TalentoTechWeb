@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>list users</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>NOMBRE</th>
+                <th>APELLIDO</th>
+                <th>CORREO</th>
+                <th>acciones</th>
+            </tr>
+        </thead>
+        <tbody id="usuarios">
+
+        </tbody>
+    </table>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function(){
+        fetch('http://localhost:3000/usuario')
+        //convierte a formato json
+        .then(response => response.json()) 
+        .then(data => { //guarda la info en var data
+            //accede a la etiqueta que mostrará las  datos
+            const tableBody = document.getElementById('usuarios')
+            //recore c/u de los datos del servicio
+            data.forEach(user => {
+                //crear una <tr> con js
+                const row = document.createElement('tr')
+                //crear una <td> con js
+                const nombre = document.createElement('td')
+                //agg valor de etiqueta
+                nombre.textContent = user.nombre
+                // agg <td> al <tr>
+                row.appendChild(nombre)
+                
+                const apellidos = document.createElement('td')
+                apellidos.textContent = user.apellidos
+                row.appendChild(apellidos)
+
+                const correo = document.createElement('td')
+                correo.textContent = user.correo
+                row.appendChild(correo)
+
+                const acciones = document.createElement('td')
+                const editar = document.createElement('a')
+                editar.textContent = 'Editar'
+
+                const eliminar = document.createElement('button') //crear etiqueta btn
+                eliminar.textContent = 'Eliminar' //agg text al btn
+                eliminar.addEventListener('click', function(){ //crear un evento al dar click
+                    const textoConfirmacion = '¿Está seguro que desea eliminar al usuario '+user.nombre+'?'
+                    if(confirm(textoConfirmacion)){ //mostrar msj de confirm
+                        eliminarUsuario(user._id, row) //llamar la función para eliminar
+                    }
+                })
+
+                acciones.appendChild(editar)
+                acciones.appendChild(eliminar)
+                row.appendChild(acciones)
+
+                //agg el <tr> a la tabla
+                tableBody.appendChild(row)
+            });
+        })
+    })
+
+    //funcion paraa eliminar un usuario pasando el id
+    function eliminarUsuario(id, row){
+        //url de elimiacion
+        const deleteUrl = 'http://localhost:3000/usuario/'+id
+        //ejecutar la accion en la API
+        fetch(deleteUrl, {
+            method: 'DELETE' //definir el metodo a usar
+        })
+        .then(response =>{
+            //obtengo la respuesta del server
+            if(response.status==200){ //validar que sea exitosa
+                row.remove() //eliminar el usuario de la lista
+                alert('Usuario eliminado correctamente') //mostrar msj de confirmación
+            }else{
+                alert('Error al eliminar el usuario') //mostrar msj de error
+            }
+        })
+        .catch(error => console.log('Error: ', error))
+    }
+</script>
+</html>
