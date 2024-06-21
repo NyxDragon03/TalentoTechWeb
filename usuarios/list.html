@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>list users</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>NOMBRE</th>
+                <th>APELLIDO</th>
+                <th>CORREO</th>
+            </tr>
+        </thead>
+        <tbody id="usuarios">
+
+        </tbody>
+    </table>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function(){
+        fetch('http://localhost:3000/usuario')
+        //convierte a formato json
+        .then(response => response.json()) 
+        .then(data => { //guarda la info en var data
+            //accede a la etiqueta que mostrará las  datos
+            const tableBody = document.getElementById('usuarios')
+            //recore c/u de los datos del servicio
+            data.forEach(user => {
+                //crear una <tr> con js
+                const row = document.createElement('tr')
+                //crear una <td> con js
+                const nombre = document.createElement('td')
+                //agg valor de etiqueta
+                nombre.textContent = user.nombre
+                // agg <td> al <tr>
+                row.appendChild(nombre)
+                
+                const apellidos = document.createElement('td')
+                apellidos.textContent = user.apellidos
+                row.appendChild(apellidos)
+
+                const correo = document.createElement('td')
+                correo.textContent = user.correo
+                row.appendChild(correo)
+
+                //agg el <tr> a la tabla
+                tableBody.appendChild(row)
+            });
+        })
+    })
+</script>
+</html>
