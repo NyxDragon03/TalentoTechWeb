@@ -6,27 +6,18 @@
     <title>fomr users</title>
 </head>
 <body>
-<<<<<<< HEAD
     <form id="guardarUsuario">
-=======
-    <form action="">
->>>>>>> 68007fb298c3c50202d2c8bf5b94d806ae3dabca
         <label for="nombre">Nombre</label>
         <input type="text" placeholder="Ingrese su nombre" id="nombre" required>
         <br>
         <label for="apellido">Apellido</label>
-<<<<<<< HEAD
         <input type="text" placeholder="Ingrese su apellido" id="apellidos" required>
-=======
-        <input type="text" placeholder="Ingrese su apellido" id="apellido" required>
->>>>>>> 68007fb298c3c50202d2c8bf5b94d806ae3dabca
         <br>
         <label for="correo">Correo</label>
         <input type="email" placeholder="Ingrese su correo" id="correo" required>
         <br>
         <label for="contraseña">Contraseña</label>
         <input type="password" placeholder="Ingrese su contraseña" id="password" required>
-<<<<<<< HEAD
         <br>
         <button type="submit">Enviar</button>
     </form>
@@ -48,7 +39,7 @@
                 correo: document.getElementById('correo').value,
                 password: document.getElementById('password').value
             }
-            
+
             fetch('http://localhost:3000/usuario/', {
                 method: 'POST',
                 headers: {
@@ -70,14 +61,5 @@
             .catch(error => console.log("Error: ", error))
         })
     })
-=======
-    </form>
-    <button type="submit">Enviar</button>
-</body>
-<script>
-    function save(){
-        console.log("ok")
-    }
->>>>>>> 68007fb298c3c50202d2c8bf5b94d806ae3dabca
 </script>
 </html>

@@ -12,10 +12,7 @@
                 <th>NOMBRE</th>
                 <th>APELLIDO</th>
                 <th>CORREO</th>
-<<<<<<< HEAD
                 <th>acciones</th>
-=======
->>>>>>> 68007fb298c3c50202d2c8bf5b94d806ae3dabca
             </tr>
         </thead>
         <tbody id="usuarios">
@@ -41,7 +38,7 @@
                 nombre.textContent = user.nombre
                 // agg <td> al <tr>
                 row.appendChild(nombre)
-                
+
                 const apellidos = document.createElement('td')
                 apellidos.textContent = user.apellidos
                 row.appendChild(apellidos)
@@ -50,7 +47,6 @@
                 correo.textContent = user.correo
                 row.appendChild(correo)
 
-<<<<<<< HEAD
                 const acciones = document.createElement('td')
                 const editar = document.createElement('a')
                 editar.textContent = 'Editar'
@@ -68,14 +64,11 @@
                 acciones.appendChild(eliminar)
                 row.appendChild(acciones)
 
-=======
->>>>>>> 68007fb298c3c50202d2c8bf5b94d806ae3dabca
                 //agg el <tr> a la tabla
                 tableBody.appendChild(row)
             });
         })
     })
-<<<<<<< HEAD
 
     //funcion paraa eliminar un usuario pasando el id
     function eliminarUsuario(id, row){
@@ -96,7 +89,5 @@
         })
         .catch(error => console.log('Error: ', error))
     }
-=======
->>>>>>> 68007fb298c3c50202d2c8bf5b94d806ae3dabca
 </script>
 </html>
