@@ -3,30 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>fomr users</title>
+    <title>form users</title>
+    <script src="../assets/loadNav.js"></script>
+    <div id="navbar"></div>
 </head>
 <body>
-    <form id="guardarUsuario">
+    <form id="guardarUsuario" class="container">
         <label for="nombre">Nombre</label>
-        <input type="text" placeholder="Ingrese su nombre" id="nombre" required>
-        <br>
+        <input type="text" placeholder="Ingrese su nombre" id="nombre" required class="form-control">
         <label for="apellido">Apellido</label>
-        <input type="text" placeholder="Ingrese su apellido" id="apellidos" required>
-        <br>
+        <input type="text" placeholder="Ingrese su apellido" id="apellidos" required class="form-control">
         <label for="correo">Correo</label>
-        <input type="email" placeholder="Ingrese su correo" id="correo" required>
-        <br>
+        <input type="email" placeholder="Ingrese su correo" id="correo" required class="form-control">
         <label for="contraseña">Contraseña</label>
-        <input type="password" placeholder="Ingrese su contraseña" id="password" required>
-        <br>
-        <button type="submit">Enviar</button>
+        <input type="password" placeholder="Ingrese su contraseña" id="password" class="form-control">
+        <hr>
+        <button type="submit" class="btn btn-success col-12 ">Enviar</button>
     </form>
-    <br>
-
 </body>
 <script>
     //ejecuta la acción cuando carga la pagina
-    document.addEventListener('DOMContentLoaded', function(){
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        const searchParams = new URLSearchParams(window.location.search)
+        const id = searchParams.get("id") //asignar el id a una variable
         //accece a la info de la etiqueta form
         const form = document.getElementById('guardarUsuario')
         //ejecutar acción al enviar formulario
@@ -39,9 +39,32 @@
                 correo: document.getElementById('correo').value,
                 password: document.getElementById('password').value
             }
-
-            fetch('http://localhost:3000/usuario/', {
-                method: 'POST',
+            
+            if(searchParams.has('id')){
+                submitForm(data, "http://localhost:3000/usuario/"+id, "PUT")
+            }else{
+                submitForm(data, "http://localhost:3000/usuario/", "POST")
+            }
+            
+        })
+    
+        //obtener el id por medio de la url
+        if(searchParams.has('id')){
+                //consultar la info del user con ese id
+                fetch('http://localhost:3000/usuario/'+id)
+                .then(response => response.json())
+                .then(data => {
+                    //asignar la info al formulario
+                    document.getElementById('nombre').value = data.nombre
+                    document.getElementById('apellidos').value = data.apellidos
+                    document.getElementById('correo').value = data.correo
+                })
+            }
+    })
+    
+    function submitForm(data, url, method){
+            fetch(url, {
+                method: method,
                 headers: {
                     'Content-Type': 'application/json'
                 },
@@ -53,13 +76,12 @@
             .then(data => {
                 if(data.status=="success"){
                     alert('Usuario registrado exitosamente')
-                    window.location.href = "./list.html";
+                    window.location.href = "./list.html"; //redireccionar a la lista de users
                 }else{
-                    alert('Registro de usuario fallido')
+                    alert(data.message)
                 }
             })
-            .catch(error => console.log("Error: ", error))
-        })
-    })
+            .catch((error) => console.log("Error: ", error))
+        }
 </script>
 </html>

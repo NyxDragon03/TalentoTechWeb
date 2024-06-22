@@ -4,18 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>list users</title>
+    <script src="../assets/loadNav.js"></script>
+    <div id="navbar"></div>
 </head>
 <body>
-    <table>
+    <table class="table table-secondary table-hover table-bordered">
         <thead>
-            <tr>
+            <tr class="table-dark">
                 <th>NOMBRE</th>
                 <th>APELLIDO</th>
                 <th>CORREO</th>
                 <th>acciones</th>
             </tr>
         </thead>
-        <tbody id="usuarios">
+        <tbody id="usuarios" class="table-group-divider">
 
         </tbody>
     </table>
@@ -48,11 +50,15 @@
                 row.appendChild(correo)
 
                 const acciones = document.createElement('td')
+
                 const editar = document.createElement('a')
                 editar.textContent = 'Editar'
+                editar.href = './create.html?id='+user._id
+                editar.classList.add('btn', 'btn-info')
 
                 const eliminar = document.createElement('button') //crear etiqueta btn
                 eliminar.textContent = 'Eliminar' //agg text al btn
+                eliminar.classList.add('btn', 'btn-danger')
                 eliminar.addEventListener('click', function(){ //crear un evento al dar click
                     const textoConfirmacion = '¿Está seguro que desea eliminar al usuario '+user.nombre+'?'
                     if(confirm(textoConfirmacion)){ //mostrar msj de confirm
