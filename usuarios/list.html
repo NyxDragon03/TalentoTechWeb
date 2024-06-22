@@ -24,7 +24,7 @@
 </body>
 <script>
     document.addEventListener('DOMContentLoaded', function(){
-        fetch('https://node-js-express-5fefs4d7f-karen-duques-projects.vercel.app/usuario')
+        fetch('https://node-js-express-nine.vercel.app//usuario')
         //convierte a formato json
         .then(response => response.json()) 
         .then(data => { //guarda la info en var data
@@ -79,7 +79,7 @@
     //funcion paraa eliminar un usuario pasando el id
     function eliminarUsuario(id, row){
         //url de elimiacion
-        const deleteUrl = 'https://node-js-express-5fefs4d7f-karen-duques-projects.vercel.app/usuario/'+id
+        const deleteUrl = 'https://node-js-express-nine.vercel.app//usuario/'+id
         //ejecutar la accion en la API
         fetch(deleteUrl, {
             method: 'DELETE' //definir el metodo a usar

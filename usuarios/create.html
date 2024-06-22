@@ -41,9 +41,9 @@
             }
             
             if(searchParams.has('id')){
-                submitForm(data, "https://node-js-express-5fefs4d7f-karen-duques-projects.vercel.app/usuario/"+id, "PUT")
+                submitForm(data, "https://node-js-express-nine.vercel.app//usuario/"+id, "PUT")
             }else{
-                submitForm(data, "https://node-js-express-5fefs4d7f-karen-duques-projects.vercel.app/usuario/", "POST")
+                submitForm(data, "https://node-js-express-nine.vercel.app//usuario/", "POST")
             }
             
         })
@@ -51,7 +51,7 @@
         //obtener el id por medio de la url
         if(searchParams.has('id')){
                 //consultar la info del user con ese id
-                fetch('https://node-js-express-5fefs4d7f-karen-duques-projects.vercel.app/usuario/'+id)
+                fetch('https://node-js-express-nine.vercel.app//usuario/'+id)
                 .then(response => response.json())
                 .then(data => {
                     //asignar la info al formulario
