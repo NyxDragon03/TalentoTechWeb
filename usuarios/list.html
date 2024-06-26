@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>list users</title>
-    <script src="../assets/loadNav.js"></script>
+    <script src="https://nyx-project.vercel.app/assets/loadNav.js"></script>
     <div id="navbar"></div>
 </head>
 <body>
@@ -24,7 +24,7 @@
 </body>
 <script>
     document.addEventListener('DOMContentLoaded', function(){
-        fetch('https://node-js-express-nine.vercel.app//usuario')
+        fetch('https://node-js-express-nine.vercel.app/usuario')
         //convierte a formato json
         .then(response => response.json()) 
         .then(data => { //guarda la info en var data
@@ -53,7 +53,7 @@
 
                 const editar = document.createElement('a')
                 editar.textContent = 'Editar'
-                editar.href = './create.html?id='+user._id
+                editar.href = './create?id='+user._id
                 editar.classList.add('btn', 'btn-info')
 
                 const eliminar = document.createElement('button') //crear etiqueta btn
@@ -79,7 +79,7 @@
     //funcion paraa eliminar un usuario pasando el id
     function eliminarUsuario(id, row){
         //url de elimiacion
-        const deleteUrl = 'https://node-js-express-nine.vercel.app//usuario/'+id
+        const deleteUrl = 'https://node-js-express-nine.vercel.app/usuario/'+id
         //ejecutar la accion en la API
         fetch(deleteUrl, {
             method: 'DELETE' //definir el metodo a usar

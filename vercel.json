@@ -12,6 +12,14 @@
       {
         "src": "/usuarios/create.html",
         "use": "@vercel/static"
+      },
+      {
+        "src": "/assets/navbar.html",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "/assets/loadNav.js",
+        "use": "@vercel/static"
       }
     ],
     "routes": [
@@ -26,6 +34,14 @@
       {
         "src": "/create",
         "dest": "/usuarios/create.html"
+      },
+      {
+        "src": "/navbar",
+        "dest": "/assets/navbar.html"
+      },
+      {
+        "src": "/loadNav",
+        "dest": "/assets/loadNav.js"
       }
     ]
   }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>form users</title>
-    <script src="../assets/loadNav.js"></script>
+    <script src="https://nyx-project.vercel.app/assets/loadNav.js"></script>
     <div id="navbar"></div>
 </head>
 <body>
@@ -41,9 +41,9 @@
             }
             
             if(searchParams.has('id')){
-                submitForm(data, "https://node-js-express-nine.vercel.app//usuario/"+id, "PUT")
+                submitForm(data, "https://node-js-express-nine.vercel.app/usuario/"+id, "PUT")
             }else{
-                submitForm(data, "https://node-js-express-nine.vercel.app//usuario/", "POST")
+                submitForm(data, "https://node-js-express-nine.vercel.app/usuario", "POST")
             }
             
         })
@@ -51,7 +51,7 @@
         //obtener el id por medio de la url
         if(searchParams.has('id')){
                 //consultar la info del user con ese id
-                fetch('https://node-js-express-nine.vercel.app//usuario/'+id)
+                fetch('https://node-js-express-nine.vercel.app/usuario/'+id)
                 .then(response => response.json())
                 .then(data => {
                     //asignar la info al formulario
@@ -76,7 +76,7 @@
             .then(data => {
                 if(data.status=="success"){
                     alert('Usuario registrado exitosamente')
-                    window.location.href = "./list.html"; //redireccionar a la lista de users
+                    window.location.href = "https://nyx-project.vercel.app/usuarios"; //redireccionar a la lista de users
                 }else{
                     alert(data.message)
                 }
