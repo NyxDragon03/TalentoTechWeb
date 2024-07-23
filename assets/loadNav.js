@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    fetch('https://nyx-project.vercel.app/navbar.html')
+    fetch('https://nyx-project.vercel.app/assets/navbar.html')
     .then(Response => {
         return Response.text();
     })
